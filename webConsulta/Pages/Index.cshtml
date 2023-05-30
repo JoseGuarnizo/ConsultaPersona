@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Consulta de socios</h1>
+
+<form method="post" asp-page-handler="ProcessText">
+    <input type="text" name="textInput" />
+    <button type="submit">Buscar</button>
+
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li>@Model.str_nombres</li>
+                    <li>@Model.str_apellidos</li>
+                 </ul>
+            </td>
+       </tr>
+    </table>
+
+</form>
